@@ -6,12 +6,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using WebApplication4.Data;
-using WebApplication4.Models;
+using AspShop.Data;
+using AspShop.Models;
 using Microsoft.AspNetCore.Http;
 using IMAPApplication.Common;
 
-namespace WebApplication4.Controllers
+namespace AspShop.Controllers
 {
     public class HomeController : Controller
     {

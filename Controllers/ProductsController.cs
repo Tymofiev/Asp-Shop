@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using WebApplication4.Data;
-using WebApplication4.Models;
+using AspShop.Data;
+using AspShop.Models;
 
-namespace WebApplication4.Controllers
+namespace AspShop.Controllers
 {
     public class ProductsController : Controller
     {
@@ -24,8 +24,8 @@ namespace WebApplication4.Controllers
         // GET: Products
         public async Task<IActionResult> Index()
         {
-            var WebApplication4DbContext = _context.Products.Include(p => p.Category);
-            return View(await WebApplication4DbContext.ToListAsync());
+            var AspShopDbContext = _context.Products.Include(p => p.Category);
+            return View(await AspShopDbContext.ToListAsync());
         }
 
         // GET: Products/Details/5

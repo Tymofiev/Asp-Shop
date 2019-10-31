@@ -1,4 +1,4 @@
-﻿@model WebApplication4.Models.CategoriesProducts
+﻿@model AspShop.Models.CategoriesProducts
 
 <section>
     <div class="container">
@@ -38,7 +38,7 @@
                                 <span>
                                     <span>US $@Model.Products.ElementAt(0).Price</span>
                                     <a asp-controller="Cart" asp-action="Buy" asp-route-id="@Model.Products.ElementAt(0).ProductId" class="btn btn-default add-to-cart">
-                                    <i class="fa fa-WebApplication4ping-cart"></i>В корзину</a>
+                                    <i class="fa fa-AspShopping-cart"></i>В корзину</a>
                                 </span>
                                 <p><b>Виробник:</b> @Model.Products.ElementAt(0).Brand </p>
                             </div>

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace WebApplication4.Data.Migrations
+namespace AspShop.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

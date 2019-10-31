@@ -1,19 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApplication4.Models;
+using AspShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
-namespace WebApplication4.Data
+namespace AspShop.Data
 {
     public class ShopDbContext : IdentityDbContext
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
-
-        public DbSet<Cart> Orders { get; set; }
+        //public DbSet<Cart> Orders { get; set; }
 
         public ShopDbContext(DbContextOptions<ShopDbContext> options) : base(options)
         {
@@ -25,7 +24,7 @@ namespace WebApplication4.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Product>().ToTable("Products");
             modelBuilder.Entity<Category>().ToTable("Categories");
-            modelBuilder.Entity<Cart>().ToTable("Orders");
+           // modelBuilder.Entity<Cart>().ToTable("Orders");
         }
     }
 }

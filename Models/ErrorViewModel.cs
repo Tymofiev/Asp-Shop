@@ -1,6 +1,6 @@
 using System;
 
-namespace WebApplication4.Models
+namespace AspShop.Models
 {
     public class ErrorViewModel
     {

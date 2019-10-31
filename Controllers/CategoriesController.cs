@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using WebApplication4.Data;
-using WebApplication4.Models;
+using AspShop.Data;
+using AspShop.Models;
 
-namespace WebApplication4.Controllers
+namespace AspShop.Controllers
 {
     public class CategoriesController : Controller
     {

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using IMAPApplication.Common;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication4.Data;
-using WebApplication4.Models;
+using AspShop.Data;
+using AspShop.Models;
 
-namespace WebApplication4.Controllers
+namespace AspShop.Controllers
 {
     public class CartController : Controller
     {
