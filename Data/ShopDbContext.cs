@@ -1,0 +1,31 @@
+﻿using Microsoft.EntityFrameworkCore;
+using WebApplication4.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
+namespace WebApplication4.Data
+{
+    public class ShopDbContext : IdentityDbContext
+    {
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Cart> Orders { get; set; }
+
+        public ShopDbContext(DbContextOptions<ShopDbContext> options) : base(options)
+        {
+            
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Product>().ToTable("Products");
+            modelBuilder.Entity<Category>().ToTable("Categories");
+            modelBuilder.Entity<Cart>().ToTable("Orders");
+        }
+    }
+}

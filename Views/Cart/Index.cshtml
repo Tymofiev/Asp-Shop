@@ -1,0 +1,86 @@
+﻿@model WebApplication4.Models.CategoriesCart
+
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="left-sidebar">
+                    <h2>Каталог</h2>
+                    <div class="panel-group category-products">
+                        @foreach (var item in Model.Categories)
+                        {
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a asp-controller="Home" asp-action="Category" asp-route-id="@item.CategoryId">
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-9 padding-right">
+                <div class="features_items">
+                    <h2 class="title text-center">Корзина</h2>
+
+                    @if (Model.Cart != null)
+                    {
+                        <p>Ви обрали такі товари:</p>
+                        <table class="table-bordered table-striped table">
+                            <tr>
+                                <th>Код товара</th>
+                                <th>Назва</th>
+                                <th>Вартість, $</th>
+                                <th>Кількість, шт</th>
+                                <th>Видалити</th>
+                            </tr>
+                            @foreach (var item in Model.Cart)
+                            {
+                                <tr>
+                                    <td>@Html.DisplayFor(modelItem => item.Product.Code)</td>
+                                    <td>
+                                        <a asp-controller="Home" asp-action="Product" asp-route-id="@item.Product.ProductId">
+                                            @Html.DisplayFor(modelItem => item.Product.Name)
+                                        </a>
+                                    </td>
+                                    <td>@(item.Product.Price * item.Quantity)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+                                    <td>
+                                        <a asp-controller="Cart" asp-action="Remove" asp-route-id="@item.Product.ProductId">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                            <tr>
+                                <td colspan="4">Загальна вартість, $: @Html.ViewBag.total</td>
+                            </tr>
+                        </table>
+                          
+                        <a asp-controller="Cart" asp-action="Order" class="btn btn-default checkout"><i class="fa fa-shopping-cart"></i> Оформити замовлення</a>
+
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-default checkout">
+                            <i class="fa fa-backspace"></i> Повернутись до покупок
+                        </a>
+                    }
+                    else
+                    {
+                        <p>Корзина порожня</p>
+
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-default checkout">
+                            <i class="fa fa-shopping-cart"></i> Повернутись до покупок
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
