@@ -12,7 +12,7 @@ namespace AspShop.Data
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
-        //public DbSet<Cart> Orders { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         public ShopDbContext(DbContextOptions<ShopDbContext> options) : base(options)
         {
@@ -24,7 +24,7 @@ namespace AspShop.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Product>().ToTable("Products");
             modelBuilder.Entity<Category>().ToTable("Categories");
-           // modelBuilder.Entity<Cart>().ToTable("Orders");
+            modelBuilder.Entity<Order>().ToTable("Orders");
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ілля\\Desktop\\AspShop\\AspShop.csproj": {}
+    "C:\\Users\\Ілля\\Desktop\\Лаби ASP\\Shop\\AspShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ілля\\Desktop\\AspShop\\AspShop.csproj": {
+    "C:\\Users\\Ілля\\Desktop\\Лаби ASP\\Shop\\AspShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ілля\\Desktop\\AspShop\\AspShop.csproj",
+        "projectUniqueName": "C:\\Users\\Ілля\\Desktop\\Лаби ASP\\Shop\\AspShop.csproj",
         "projectName": "AspShop",
-        "projectPath": "C:\\Users\\Ілля\\Desktop\\AspShop\\AspShop.csproj",
+        "projectPath": "C:\\Users\\Ілля\\Desktop\\Лаби ASP\\Shop\\AspShop.csproj",
         "packagesPath": "C:\\Users\\Ілля\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ілля\\Desktop\\AspShop\\obj\\",
+        "outputPath": "C:\\Users\\Ілля\\Desktop\\Лаби ASP\\Shop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace AspShop.Models
 {
-    public class Order
-    {        
+    public class CartItem
+    {
         [Key]
-        [Required]
         public int Id { get; set; }
-        public string UserEmail { get; set; }
-        public DateTime Date { get; set; }
-        public virtual ICollection<CartItem> Products { get; set; }
+        public Product Product { get; set; }
+        public int Quantity { get; set; }
     }
 }
